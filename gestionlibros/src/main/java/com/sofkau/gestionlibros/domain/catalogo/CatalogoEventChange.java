@@ -18,7 +18,7 @@ public class CatalogoEventChange implements EventChange {
         listener((LibroRegistrado event) -> {
             var libro = new Libro(event.getLibroId(), event.getTitulo(), event.getAutor(),
                     event.getGenero(), event.getDescripcion(), event.getEditorial(),
-                    event.getFechaLanzamiento(), event.getImagen(), event.getUrlLectura());
+                    event.getFechaLanzamiento(), event.getPaginas(), event.getImagen(), event.getUrlLectura());
             catalogo.libros.add(libro);
         });
     }

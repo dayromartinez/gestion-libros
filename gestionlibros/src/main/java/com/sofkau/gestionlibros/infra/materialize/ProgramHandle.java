@@ -43,6 +43,7 @@ public class ProgramHandle {
         document.put("libro."+event.getTitulo()+".descripcion", event.getDescripcion());
         document.put("libro."+event.getTitulo()+".editorial", event.getEditorial());
         document.put("libro."+event.getTitulo()+".fechalanzamiento", event.getFechaLanzamiento());
+        document.put("libro."+event.getTitulo()+".paginas", event.getPaginas());
         document.put("libro."+event.getTitulo()+".imagen", event.getImagen());
         document.put("libro."+event.getTitulo()+".urllectura", event.getUrlLectura());
 

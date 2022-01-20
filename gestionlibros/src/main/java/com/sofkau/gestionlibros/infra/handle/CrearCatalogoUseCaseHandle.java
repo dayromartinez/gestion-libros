@@ -16,7 +16,7 @@ public class CrearCatalogoUseCaseHandle extends UseCaseHandle {
         this.crearCatalogoUseCase = crearCatalogoUseCase;
     }
 
-    @ConsumeEvent(value = "sofka.crearcatalogo")
+    @ConsumeEvent(value = "sofkau.crearcatalogo")
     void consumeBlocking(CrearCatalogoCommand crearCatalogoCommand) {
         var events = crearCatalogoUseCase.apply(crearCatalogoCommand);
         saveCatalogo(crearCatalogoCommand.getCatalogoId(), events);

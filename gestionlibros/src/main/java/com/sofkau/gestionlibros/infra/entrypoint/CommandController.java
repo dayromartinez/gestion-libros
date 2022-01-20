@@ -30,7 +30,7 @@ public class CommandController {
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/crearCatalogo")
     public Response executor(CrearCatalogoCommand command) {
-        bus.publish(command.getType(), command);//emitir comandos, los casos de uso
+        bus.publish(command.getType(), command);
         return Response.ok().build();
     }
 }

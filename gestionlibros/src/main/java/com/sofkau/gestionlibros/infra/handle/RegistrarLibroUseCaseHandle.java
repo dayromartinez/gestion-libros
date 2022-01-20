@@ -1,6 +1,5 @@
 package com.sofkau.gestionlibros.infra.handle;
 
-import com.sofkau.gestionlibros.domain.catalogo.commands.CrearCatalogoCommand;
 import com.sofkau.gestionlibros.domain.catalogo.commands.RegistrarLibroCommand;
 import com.sofkau.gestionlibros.infra.generic.UseCaseHandle;
 import com.sofkau.gestionlibros.useCases.RegistrarLibroUseCase;
@@ -17,7 +16,7 @@ public class RegistrarLibroUseCaseHandle extends UseCaseHandle {
         this.registrarLibroUseCase = registrarLibroUseCase;
     }
 
-    @ConsumeEvent(value = "sofka.crearcatalogo")
+    @ConsumeEvent(value = "sofkau.registrarlibro")
     void consumeBlocking(RegistrarLibroCommand registrarLibroCommand) {
         var events = registrarLibroUseCase.apply(registrarLibroCommand);
         saveCatalogo(registrarLibroCommand.getCatalogoId(), events);

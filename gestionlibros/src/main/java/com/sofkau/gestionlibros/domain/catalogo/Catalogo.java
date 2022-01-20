@@ -31,8 +31,8 @@ public class Catalogo extends AggregateRoot {
         return catalogo;
     }
 
-    public void registrarPelicula(String libroId, String titulo, String autor, String genero, String descripcion, String editorial, String fechaLanzamiento, String imagen, String urlLectura){
-        appendChange(new LibroRegistrado(libroId, titulo, autor, genero, descripcion, editorial, fechaLanzamiento, imagen, urlLectura)).apply();
+    public void registrarLibro(String libroId, String titulo, String autor, String genero, String descripcion, String editorial, String fechaLanzamiento, int paginas, String imagen, String urlLectura){
+        appendChange(new LibroRegistrado(libroId, titulo, autor, genero, descripcion, editorial, fechaLanzamiento, paginas, imagen, urlLectura)).apply();
     }
 
     public List<Libro> libros() {

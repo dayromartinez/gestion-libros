@@ -1,6 +1,7 @@
 package com.sofkau.gestionlibros.infra.entrypoint;
 
 import com.sofkau.gestionlibros.domain.generic.DomainEvent;
+import com.sofkau.gestionlibros.domain.generic.EventSerializer;
 import org.jboss.logging.Logger;
 
 import javax.enterprise.context.ApplicationScoped;

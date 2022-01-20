@@ -11,10 +11,11 @@ public class LibroRegistrado extends DomainEvent {
     private final String descripcion;
     private final String editorial;
     private final String fechaLanzamiento;
+    private final int paginas;
     private final String imagen;
     private final String urlLectura;
 
-    public LibroRegistrado(String libroId, String titulo, String autor, String genero, String descripcion, String editorial, String fechaLanzamiento, String imagen, String urlLectura) {
+    public LibroRegistrado(String libroId, String titulo, String autor, String genero, String descripcion, String editorial, String fechaLanzamiento, int paginas, String imagen, String urlLectura) {
         super("sofkau.libroregistrado");
         this.libroId = libroId;
         this.titulo = titulo;
@@ -23,6 +24,7 @@ public class LibroRegistrado extends DomainEvent {
         this.descripcion = descripcion;
         this.editorial = editorial;
         this.fechaLanzamiento = fechaLanzamiento;
+        this.paginas = paginas;
         this.imagen = imagen;
         this.urlLectura = urlLectura;
     }
@@ -53,6 +55,10 @@ public class LibroRegistrado extends DomainEvent {
 
     public String getFechaLanzamiento() {
         return fechaLanzamiento;
+    }
+
+    public int getPaginas() {
+        return paginas;
     }
 
     public String getImagen() {

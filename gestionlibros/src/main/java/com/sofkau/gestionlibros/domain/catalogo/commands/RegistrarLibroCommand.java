@@ -12,6 +12,7 @@ public class RegistrarLibroCommand extends Command {
     private String descripcion;
     private String editorial;
     private String fechaLanzamiento;
+    private int paginas;
     private String imagen;
     private String urlLectura;
 
@@ -80,6 +81,14 @@ public class RegistrarLibroCommand extends Command {
 
     public void setFechaLanzamiento(String fechaLanzamiento) {
         this.fechaLanzamiento = fechaLanzamiento;
+    }
+
+    public int getPaginas() {
+        return paginas;
+    }
+
+    public void setPaginas(int paginas) {
+        this.paginas = paginas;
     }
 
     public String getImagen() {

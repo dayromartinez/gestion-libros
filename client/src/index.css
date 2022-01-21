@@ -24,3 +24,22 @@ code {
 #titulo_footer{
   color: whitesmoke;
 }
+
+.contenedor_general_catalogo{
+  background-color: beige;
+  padding-bottom: 3rem;
+}
+
+.contenedor_libro{
+  margin-top: 2rem;
+}
+
+.titulo_catalogo{
+  padding-top: 3rem;
+  margin-left: -46rem;
+  margin-bottom: 5rem;
+}
+
+.alinear-texto{
+  text-align: left;
+}

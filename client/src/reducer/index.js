@@ -17,7 +17,20 @@ export default function rootReducer(state = initialState, action) {
             return { ...state, loading: true };
 
         case actions.LOADED_SUCCESS:
-            return { ...state, catalogo: action.payload, loading: false, hasErrors: false };
+
+            var data = action.payload[0].libro;
+            var nombres = Object.keys(data);
+            var libros = [];
+
+            for (let i = 0; i < nombres.length; i++) {
+                for (const libro in data) {
+                    if(libro === nombres[i]){
+                        libros.push(data[libro]);
+                    }
+                }
+            }
+
+            return { ...state, catalogo: libros, loading: false, hasErrors: false };
 
         case actions.LOADED_FAILURE:
             return { ...state, loading: false, hasErrors: true }

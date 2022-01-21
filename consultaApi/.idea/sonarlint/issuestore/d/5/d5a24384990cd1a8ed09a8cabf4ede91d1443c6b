@@ -1,20 +1,0 @@
-
-b	java:S112X"FDefine and throw a dedicated exception instead of using a generic one.(â™…å8ƒ‰Êç/
-o
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Çµí‘8ƒ‰Êç/
-d
-java:S1659"BDeclare "autor" and all following declarations on a separate line.(Âƒ¤ûÿÿÿÿ8ƒ‰Êç/
-g
-java:S1659"EDeclare "isGenero" and all following declarations on a separate line.(î´øöşÿÿÿÿ8Ÿƒ‰Êç/
-X	java:S125"<This block of commented-out lines of code should be removed.(¬õæÉ8Ÿƒ‰Êç/
-T
-java:S1874"2Remove this use of "JsonParser"; it is deprecated.(«´†ûÿÿÿÿ8Ÿƒ‰Êç/
-O
-java:S1874"-Remove this use of "parse"; it is deprecated.(«´†ûÿÿÿÿ8Ÿƒ‰Êç/
-X	java:S125"<This block of commented-out lines of code should be removed.(ƒªÖ€8Ÿƒ‰Êç/
-X	java:S125"<This block of commented-out lines of code should be removed.(ƒªÖ€8Ÿƒ‰Êç/
-X	java:S125"<This block of commented-out lines of code should be removed.(ƒªÖ€8Ÿƒ‰Êç/
-X	java:S125"<This block of commented-out lines of code should be removed.(ƒªÖ€8Ÿƒ‰Êç/
-X	java:S125"<This block of commented-out lines of code should be removed.(ƒªÖ€8Ÿƒ‰Êç/
-Z	java:S106M"9Replace this use of System.out or System.err by a logger.(¥å±øÿÿÿÿ8Ÿƒ‰Êç/
-Osecrets:S6334"/Make sure this Google API Key is not disclosed.(Ì«Ì•8éáÉç/

@@ -35,7 +35,8 @@ public class RegistrarLibroUseCase implements Function<RegistrarLibroCommand, Li
 
     @Override
     public List<DomainEvent> apply(RegistrarLibroCommand registrarLibroCommand) {
-
+        //Propiedad para traer el autor que el usuario indico en la UI
+        //String autorBusqueda = registrarLibroCommand.getAutor();
         var catalogo = Catalogo.from(registrarLibroCommand.getCatalogoId(),
                 eventStoreRepository.getEventsBy("catalogo", registrarLibroCommand.getCatalogoId()));
 

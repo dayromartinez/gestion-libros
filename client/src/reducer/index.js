@@ -30,7 +30,7 @@ export default function rootReducer(state = initialState, action) {
                 }
             }
 
-            return { ...state, catalogo: libros, loading: false, hasErrors: false };
+            return { ...state, catalogo: _.shuffle(libros), loading: false, hasErrors: false };
 
         case actions.LOADED_FAILURE:
             return { ...state, loading: false, hasErrors: true }

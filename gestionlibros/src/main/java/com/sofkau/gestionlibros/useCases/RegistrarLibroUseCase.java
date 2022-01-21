@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
+import java.util.UUID;
 import java.util.function.Function;
 import java.util.logging.Logger;
 
@@ -90,7 +91,8 @@ public class RegistrarLibroUseCase implements Function<RegistrarLibroCommand, Li
                 fechaLanzamiento = entrada.get("publishedDate").getAsString();
                 urlLectura = jsonlibros.get(i).getAsJsonObject().get("accessInfo").getAsJsonObject().get("webReaderLink").getAsString();
                 logger.info("Log to test");
-                catalogo.registrarLibro(registrarLibroCommand.getLibroId(), titulo, autor, genero, descripcion,
+                UUID uuid = UUID.randomUUID();
+                catalogo.registrarLibro(String.valueOf(uuid), titulo, autor, genero, descripcion,
                 editorial, fechaLanzamiento, paginas, imagen, urlLectura);
             }
 

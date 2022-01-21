@@ -13,20 +13,20 @@ public class Catalogo extends AggregateRoot {
     protected List<Libro> libros;
     protected String nombre;
 
-    public Catalogo(String catalogoid, String nombre) {
-        super(catalogoid);
+    public Catalogo(String catalogoId, String nombre) {
+        super(catalogoId);
         subscribe(new CatalogoEventChange(this));
         this.libros = new ArrayList<>();
         appendChange(new CatalogoCreado(nombre)).apply();
     }
 
-    private Catalogo(String id) {
-        super(id);
+    private Catalogo(String catalogoId) {
+        super(catalogoId);
         subscribe(new CatalogoEventChange(this));
     }
 
-    public static Catalogo from(String id, List<DomainEvent> events){
-        var catalogo = new Catalogo(id);
+    public static Catalogo from(String catalogoId, List<DomainEvent> events){
+        var catalogo = new Catalogo(catalogoId);
         events.forEach(catalogo::applyEvent);
         return catalogo;
     }

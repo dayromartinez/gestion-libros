@@ -20,7 +20,7 @@ public class CommandController {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    @Path("/registrarLibro")
+    @Path("/registrarLibros")
     public Response executor(RegistrarLibroCommand command) {
         bus.publish(command.getType(), command);
         return Response.ok().build();
